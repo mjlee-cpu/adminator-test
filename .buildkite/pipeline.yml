@@ -1,0 +1,6 @@
+agents:
+  queue: "windows"
+
+steps:
+  - label: "Build"
+    command: "echo hello"
