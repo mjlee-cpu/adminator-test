@@ -2,5 +2,10 @@ agents:
   queue: "windows"
 
 steps:
-  - label: "Build"
-    command: "echo hello"
+  - label: ":hammer: Install, lint, test, build"
+    commands:
+      - "call npm ci"
+      - "call npm run lint"
+      - "call npm run test:run"
+      - "call npm run build"
+    artifact_paths: "dist/**/*""
